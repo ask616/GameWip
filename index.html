@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<title>GameWip</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+		<link rel="icon" href="favicon.ico" type="img/favicon.ico" />
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	</head>
+
+<body>
+	<div id="background"></div>
+	<div class="header">
+		<div class="header-content">
+			<span class="title">GameWip</span>
+			<ul>
+				<li><a href="#" id="active">Home</a></li>
+		        <li class="hover-change"><a href="#">About</a></li>	        
+		        <li class="hover-change"><a href="#">Discover</a></li>
+		        <li class="hover-change"><a href="#">Popular</a></li>
+		        <li class="hover-change"><a href="#">New Games</a></li>
+		        <li class="hover-change"><a href="#">Login</a></li>
+	        	<li>
+			    	<form class="pure-form">
+					    <input type="text" class="pure-input-rounded" placeholder="Search Games">
+					    <button type="submit" class="pure-button search-button pure-button-primary">Search</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div i)d="headline">
+		<div id="tagline-main" class="text-center">Introducing GameWip</div>
+		<span id="tagline-sub" class="text-center">THE ULTIMATE UTILITY FOR GAME DEVELOPERS</span>
+		<span id="intro-top" class="text-center">Publish your Beta or start playing in moments</span>
+		<span id="intro-bot" class="text-center">It's really that simple.</span>
+	</div>
+	<div id="buttons">
+		<div class="container text-center">
+			<button class="pure-button pure-button-primary signup">Sign Up</button>
+		</div>
+		<div class="container text-center">
+			<button class="pure-button pure-button-primary signin">Log In</button>
+		</div>
+	</div>
+
+	<div id="signin-popout">
+		<form class="pure-form pure-form-stacked">
+		    <fieldset>
+		        <input id="signinEmail" type="email" placeholder="Email" style="height:30px;">
+
+		        <input id="signinPassword" type="password" placeholder="Password" style="height:30px;">
+		    </fieldset>
+		</form>
+	</div>
+
+	<div id="signup-popout">
+		<form class="pure-form pure-form-stacked">
+		    <fieldset>
+		    	<input id="username" type="text" placeholder="Username" style="height:30px;">
+
+		        <input id="email" type="email" placeholder="Email" style="height:30px;">
+
+		        <input id="password" type="password" placeholder="Password" style="height:30px;">
+
+		    </fieldset>
+		    	
+		</form>
+<button id="new-account" class="pure-button pure-button-primary" style="font-size: 100%;">Get Started</button>
+	</div>
+
+	<div class="main-info">
+		<div id="developers">
+
+			<embed src="img/bargraph.svg" type="image/svg+xml" width="198px" height="190px" class="bargraph"/>
+			<span id="developers-title" class="text-center">GameWip for Developers</span>
+			<ul class="no-bullet dev-benefits text-center">
+				<li id="1">Gain access to a broad community of eager testers</li>
+				<li id="2">Receive invaluable popularity around the world</li>
+				<li id="3">View real-time statistics about downloads and bugs from users</li>
+				<li id="4">Raise money for further development through crowdfunding</li>
+			</ul>
+		</div>
+		<hr style="BORDER-TOP: #cccccc 2px solid; BORDER-BOTTOM: medium none; HEIGHT: 4px;width:60%; align: center; margin-top:340px;margin-left: 20%;">
+		<div id="gamers">
+			<img src="img/invaders.png" id="invaders" />
+			<span id="gamers-title" class="text-center">GameWip for Gamers</span>
+			<ul class="no-bullet gamer-benefits text-center">
+				<li id="5">Be among the first to play future global smash hits</li>
+				<li id="6">Help shape the future of your favorite games</li>
+				<li id="7">Gain access to a huge library of games in their infancy</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div id="when">Built at SF TechCrunch Disrupt 2013 <span id="copyright">Copyright &copy; 2013</span></div>
+	</div>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript">
+		var chatRef = new Firebase('https://gamewip-user-pool.firebaseio.com/');
+		var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
+		  if (error) {
+		    // an error occurred while attempting login
+		    console.log(error);
+		  } else if (user) {
+		    // user authenticated with Firebase
+		    // console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+		    auth.logout();
+		  } else {
+		    // user is logged out
+		  }
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- // 	<script type="text/javascript">
+// (function(a){if(window.filepicker){return}var b=a.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===a.location.protocol?"https:":"http:")+"//api.filepicker.io/v1/filepicker.js";var c=a.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d={};d._queue=[];var e="pick,pickMultiple,pickAndStore,read,write,writeUrl,export,convert,store,storeUrl,remove,stat,setKey,constructWidget,makeDropPane".split(",");var f=function(a,b){return function(){b.push([a,arguments])}};for(var g=0;g<e.length;g++){d[e[g]]=f(e[g],d._queue)}window.filepicker=d})(document); 
+// </script>
+
+// 	<script type="text/javascript">
+// 		filepicker.setKey('AY0LvkPaiSaqFZE4tO5J0z');
+// 	</script> -->

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<title>GameWip</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/stats.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+		<link rel="icon" href="img/favicon.ico" type="image/ico" />
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+
+
+
+
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	    <script type="text/javascript">
+	      google.load("visualization", "1", {packages:["corechart"]});
+	      google.setOnLoadCallback(drawChart);
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['Day', 'Downloads'],
+	          ['Mon',  351],
+	          ['Wed',  118],
+	          ['Fri',  423],
+	          ['Sun',  28]
+	        ]);
+
+	        var options = {
+	          title: 'Download Activity'
+	        };
+
+	        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+	        chart.draw(data, options);
+	      }
+	    </script>
+
+
+
+
+
+
+	    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	    <script type="text/javascript">
+	      google.load("visualization", "1", {packages:["corechart"]});
+	      google.setOnLoadCallback(drawChart);
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['OS', 'Download Share'],
+	          ['Windows',     4931],
+	          ['Mac OS',      2327],
+	          ['Ubuntu',  593],
+	          ['Other', 698]
+	        ]);
+
+	        var options = {
+	          title: 'OS Distribution'
+	        };
+
+	        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+	        chart.draw(data, options);
+	      }
+	    </script>
+	</head>
+
+	<body>
+		<div class="background-stats"></div>
+		<div class="semi-transparent-stats"></div>
+		<div class="header">
+			<div class="header-content">
+				<span id="title">GameWip</span>
+				<ul>
+				<li class="hover-change"><a href="index.html">Home</a></li>
+		        <li class="hover-change" id="about"><a href="#">About</a></li>	        
+		        <li class="hover-change"><a href="#">Discover</a></li>
+		        <li class="hover-change"><a href="#">Popular</a></li>
+		        <li class="hover-change"><a href="#">New Games</a></li>
+		        <li class="hover-change" id="logout"><a href="index.html">Logout</a></li>
+		        	<li>
+				    	<form class="pure-form">
+						    <input type="text" class="pure-input-rounded" placeholder="Search Games">
+						    <button type="submit" class="pure-button search-button pure-button-primary">Search</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	<div class="stats-title">ANALYSIS PORTAL</div>
+	<div class="stats-name">Type King</div>
+	<div class="mailbox">
+		<div class="mailbox-top"><span class="mailbox-header">Inbox</span></div>
+		<div class="messages">
+			<div class="container">
+				<span class="mailbox-status text-center">No messages to display at this time.</span>
+			</div>
+		</div>
+	</div>
+
+	<body>
+    <div id="chart_div" style="width: 400px; height: 250px;position:absolute;z-index:10000000000000000000000;margin-top:650px;margin-left: 200px;background-color:rgba(255,255,255,0.8);border-radius:10px;"></div>
+
+    <div id="piechart" style="width: 400px; height: 250px; margin-top:650px; right: 200px; position:absolute;z-index:10000000000000000000000;"></div>
+  </body>
+</body>
+</html>
+
+
+
+<!-- 	<div id="heatmapArea" style="position:absolute;margin-top:150px;margin-left:50px;z-index: 100000000000000000000000000000000000000;height:500px;width:1000px"></div> -->
